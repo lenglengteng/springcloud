@@ -1,0 +1,23 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: miscroservice-user
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/springcloud?characterEncoding=UTF8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 1111
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    database: mysql
+eureka:
+    client:
+      fetch-registry: true
+      register-with-eureka: true
+      service-url:
+        defaultZone: http://127.0.0.1:8889/eureka
+          #defaultZone: http://127.0.0.1:8889/eureka,http://127.0.0.1:9999/eureka
+    instance:
+      prefer-ip-address: true

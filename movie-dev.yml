@@ -1,0 +1,17 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: miscroservice-movie
+eureka:
+    client:
+      fetch-registry: true
+      register-with-eureka: true
+      service-url:
+        defaultZone: http://127.0.0.1:8889/eureka
+         # defaultZone: http://127.0.0.1:8889/eureka,http://127.0.0.1:9999/eureka
+    instance:
+      prefer-ip-address: true
+feign:
+   hystrix:
+     enabled: true
